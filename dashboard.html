@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Journal - Dashboard</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <ul>
+                <li><a href="#" class="active">Trade Journal</a></li>
+                <li><a href="#">Stats</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <h1>Trading Journal</h1>
+                <button id="logoutBtn">Logout</button>
+            </header>
+
+            <div class="stats-section">
+                <h3>Performance Overview</h3>
+                <canvas id="winRateChart"></canvas>
+                <canvas id="dailyTrendChart"></canvas>
+            </div>
+
+            <div class="journal-section">
+                <h3>Log a New Trade</h3>
+                <form id="tradeForm">
+                    <input type="date" id="tradeDate" required>
+                    <input type="text" id="entryPrice" placeholder="Entry Price" required>
+                    <input type="text" id="exitPrice" placeholder="Exit Price" required>
+                    <input type="number" id="profitLoss" placeholder="Profit/Loss" required>
+                    <textarea id="notes" placeholder="Notes..."></textarea>
+                    <button type="submit">Add Trade</button>
+                </form>
+
+                <h3>Trade History</h3>
+                <div id="tradeList"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/chart.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
